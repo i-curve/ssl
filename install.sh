@@ -45,7 +45,7 @@ install(){
     read  out
 if [[ -z "$out" ]];then
     out=`pwd`/out
-elif [[ ! ls -d "$out" ]];
+elif [[ ! ls -d "$out" ]];then
     yellow "文件生成位置不存在"
     exit 1
 fi
