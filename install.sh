@@ -41,11 +41,14 @@ install(){
     read name
     green "请输入网站根目录的位置"
     read  position
-    green "请输入证书生成位置，默认执行命令的位置"
+    green "请输入证书生成位置，本目录下的out文件夹"
     read  out
-    if [[ -z "$out" ]];then
-        out=`pwd`/out
-    fi
+if [[ -z "$out" ]];then
+    out=`pwd`/out
+elif [[ ! ls -d "$out" ]];
+    yellow "文件生成位置不存在"
+    exit 1
+fi
 
     check_name
 $systemPackage -y update
