@@ -44,7 +44,7 @@ install(){
     green "请输入证书生成位置，默认执行命令的位置"
     read  out
     if [[ -z "$out" ]];then
-        out=./out
+        out=`pwd`/out
     fi
 
     check_name
