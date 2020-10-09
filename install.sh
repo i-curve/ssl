@@ -59,9 +59,10 @@ if curl -o ~/.acme.sh/acme.sh https://raw.githubusercontent.com/acmesh-official/
         bash ~/.acme.sh/acme.sh  --installcert  -d  $name   \
         --key-file   $out/private.key \
         --fullchain-file $out/fullchain.cer
+        yellow "请注意，此域名有效期3个月"
         green "证书申请成功，请进入目录 $out 查看"
     else
-        red "网站根目录解析不正确"
+        red "网站根目录解析不正确或者申请过于频繁，请稍后再试..."
     fi
 else
     red "下载出错"
