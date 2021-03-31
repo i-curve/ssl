@@ -41,7 +41,7 @@ install(){
     read name
     green "请输入网站根目录的位置"
     read  position
-    green "请输入证书生成位置，本目录下的out文件夹"
+    green "请输入证书生成位置，默认本目录下的out文件夹"
     read  out
 if [[ -z "$out" ]];then
     out=`pwd`/out
