@@ -1,3 +1,6 @@
+Merge to [github.com/i-curve/Bash](https://github.com/i-curve/Bash)
+
+
 # ssl
 
 ssl证书申请
